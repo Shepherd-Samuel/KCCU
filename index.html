@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Church Management System</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Theme Extension -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6BCF9A',   // light green 🍏
+            accent: '#E74C3C',    // subtle red 🔴
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- ================= HEADER / NAV ================= -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold text-primary">
+      Church<span class="text-accent">CMS</span>
+    </h1>
+
+    <nav class="hidden md:flex space-x-8 font-medium">
+      <a href="#features" class="hover:text-primary">Features</a>
+      <a href="#about" class="hover:text-primary">About</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
+    </nav>
+
+    <div class="flex space-x-3">
+      <button class="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition">
+        Login
+      </button>
+      <button class="px-4 py-2 bg-accent text-white rounded-lg hover:opacity-90 transition">
+        Get Started
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="bg-gradient-to-br from-white to-green-50">
+  <div class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+    
+    <div>
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+        Smart Church <br />
+        <span class="text-primary">Management Made Simple</span>
+      </h2>
+
+      <p class="mt-6 text-lg text-gray-600">
+        A modern system built to help churches manage members, attendance,
+        events, finances, and reports — all in one secure platform.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <button class="px-6 py-3 bg-primary text-white rounded-xl text-lg hover:opacity-90">
+          Start Free
+        </button>
+        <button class="px-6 py-3 border border-gray-300 rounded-xl text-lg hover:border-primary">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl"></div>
+      <div class="relative bg-white p-8 rounded-3xl shadow-xl">
+        <ul class="space-y-4 text-gray-700">
+          <li>✔ Member Records & Profiles</li>
+          <li>✔ Attendance Tracking</li>
+          <li>✔ Events & Announcements</li>
+          <li>✔ Finance & Tithes</li>
+          <li>✔ Secure Admin Dashboard</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section id="features" class="py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold">
+      Everything Your Church Needs
+    </h3>
+    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+      Designed to support growth, accountability, and effective ministry.
+    </p>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold text-primary">Member Management</h4>
+        <p class="mt-3 text-gray-600">
+          Centralized profiles with personal details, roles, and history.
+        </p>
+      </div>
+
+      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold text-primary">Attendance Tracking</h4>
+        <p class="mt-3 text-gray-600">
+          Track services, meetings, and events with ease.
+        </p>
+      </div>
+
+      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold text-primary">Events & Programs</h4>
+        <p class="mt-3 text-gray-600">
+          Manage church events, calendars, and announcements.
+        </p>
+      </div>
+
+      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold text-primary">Finance & Tithes</h4>
+        <p class="mt-3 text-gray-600">
+          Transparent tracking of offerings, donations, and expenses.
+        </p>
+      </div>
+
+      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold text-primary">Reports & Insights</h4>
+        <p class="mt-3 text-gray-600">
+          Generate accurate reports for leadership and accountability.
+        </p>
+      </div>
+
+      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold text-primary">Secure Access</h4>
+        <p class="mt-3 text-gray-600">
+          Role-based access for admins, pastors, and members.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="bg-green-50 py-20">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold">Built for Ministry, Powered by Technology</h3>
+    <p class="mt-6 text-gray-700 leading-relaxed">
+      This Church Management System is built to support churches of all sizes.
+      It focuses on simplicity, transparency, and scalability — allowing
+      leadership to focus on ministry while the system handles administration.
+    </p>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <div class="bg-primary rounded-3xl p-12 text-white">
+      <h3 class="text-3xl font-bold">Ready to Transform Church Administration?</h3>
+      <p class="mt-4 text-lg opacity-90">
+        Start managing your church more effectively today.
+      </p>
+      <button class="mt-8 px-8 py-4 bg-white text-primary rounded-xl font-semibold text-lg hover:opacity-90">
+        Create an Account
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-white border-t">
+  <div class="max-w-7xl mx-auto px-6 py-10 text-center text-gray-600">
+    © 2026 ChurchCMS. Built for growth, service, and stewardship.
+  </div>
+</footer>
+
+</body>
+</html>

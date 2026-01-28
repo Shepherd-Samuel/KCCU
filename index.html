@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Church Management System</title>
+  <title>KCCU | Church Management System</title>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Theme Extension -->
+  <!-- Theme -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#6BCF9A',   // light green 🍏
-            accent: '#E74C3C',    // subtle red 🔴
+            primary: '#6BCF9A',
+            accent: '#E74C3C',
+            soft: '#F4FBF8'
           }
         }
       }
@@ -25,24 +26,32 @@
 
 <body class="bg-white text-gray-800">
 
-<!-- ================= HEADER / NAV ================= -->
-<header class="sticky top-0 z-50 bg-white shadow-sm">
+<!-- ================= NAV ================= -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <h1 class="text-2xl font-bold text-primary">
-      Church<span class="text-accent">CMS</span>
-    </h1>
 
-    <nav class="hidden md:flex space-x-8 font-medium">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 3v18M5 9h14M7 21h10"/>
+        </svg>
+      </div>
+      <h1 class="text-2xl font-bold">
+        KCCU<span class="text-primary">CMS</span>
+      </h1>
+    </div>
+
+    <nav class="hidden md:flex gap-8 font-medium">
       <a href="#features" class="hover:text-primary">Features</a>
       <a href="#about" class="hover:text-primary">About</a>
       <a href="#contact" class="hover:text-primary">Contact</a>
     </nav>
 
-    <div class="flex space-x-3">
-      <button class="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition">
+    <div class="flex gap-3">
+      <button class="px-4 py-2 border border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition">
         Login
       </button>
-      <button class="px-4 py-2 bg-accent text-white rounded-lg hover:opacity-90 transition">
+      <button class="px-4 py-2 bg-accent text-white rounded-xl hover:opacity-90">
         Get Started
       </button>
     </div>
@@ -50,39 +59,71 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="bg-gradient-to-br from-white to-green-50">
-  <div class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
-    
+<section class="bg-gradient-to-br from-white via-soft to-green-100">
+  <div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+
     <div>
-      <h2 class="text-4xl md:text-5xl font-bold leading-tight">
-        Smart Church <br />
-        <span class="text-primary">Management Made Simple</span>
+      <span class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.538 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.538-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.93 8.719c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"/>
+        </svg>
+        Trusted Church Platform
+      </span>
+
+      <h2 class="mt-6 text-4xl md:text-5xl font-extrabold leading-tight">
+        KCCU Digital <br />
+        <span class="text-primary">Church Management</span>
       </h2>
 
-      <p class="mt-6 text-lg text-gray-600">
-        A modern system built to help churches manage members, attendance,
-        events, finances, and reports — all in one secure platform.
+      <p class="mt-6 text-lg text-gray-600 max-w-xl">
+        Manage members, attendance, services, finances, and reports in one
+        secure, beautifully designed system built for ministry.
       </p>
 
-      <div class="mt-8 flex flex-wrap gap-4">
-        <button class="px-6 py-3 bg-primary text-white rounded-xl text-lg hover:opacity-90">
-          Start Free
+      <div class="mt-10 flex gap-4 flex-wrap">
+        <button class="px-8 py-4 bg-primary text-white rounded-2xl text-lg shadow-lg hover:shadow-xl">
+          Start Now
         </button>
-        <button class="px-6 py-3 border border-gray-300 rounded-xl text-lg hover:border-primary">
-          Learn More
+        <button class="px-8 py-4 bg-white border rounded-2xl text-lg hover:border-primary">
+          View Demo
         </button>
       </div>
     </div>
 
     <div class="relative">
-      <div class="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl"></div>
-      <div class="relative bg-white p-8 rounded-3xl shadow-xl">
-        <ul class="space-y-4 text-gray-700">
-          <li>✔ Member Records & Profiles</li>
-          <li>✔ Attendance Tracking</li>
-          <li>✔ Events & Announcements</li>
-          <li>✔ Finance & Tithes</li>
-          <li>✔ Secure Admin Dashboard</li>
+      <div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
+      <div class="relative bg-white rounded-3xl shadow-2xl p-10">
+        <ul class="space-y-5 text-gray-700">
+          <li class="flex gap-3 items-center">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 13l4 4L19 7"/>
+            </svg>
+            Member Profiles & Groups
+          </li>
+          <li class="flex gap-3 items-center">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 13l4 4L19 7"/>
+            </svg>
+            Attendance & Services
+          </li>
+          <li class="flex gap-3 items-center">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 13l4 4L19 7"/>
+            </svg>
+            Events & Announcements
+          </li>
+          <li class="flex gap-3 items-center">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 13l4 4L19 7"/>
+            </svg>
+            Finance & Tithes
+          </li>
+          <li class="flex gap-3 items-center">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 13l4 4L19 7"/>
+            </svg>
+            Secure Admin Dashboard
+          </li>
         </ul>
       </div>
     </div>
@@ -91,56 +132,101 @@
 </section>
 
 <!-- ================= FEATURES ================= -->
-<section id="features" class="py-20">
+<section id="features" class="py-24">
   <div class="max-w-7xl mx-auto px-6 text-center">
-    <h3 class="text-3xl font-bold">
-      Everything Your Church Needs
+    <h3 class="text-3xl md:text-4xl font-bold">
+      Everything KCCU Needs — In One Place
     </h3>
-    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-      Designed to support growth, accountability, and effective ministry.
-    </p>
 
-    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      
-      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+      <!-- Member Management -->
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+        <div class="w-12 h-12 bg-primary/15 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M17 20v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 20v-2a4 4 0 00-3-3.87"/>
+            <path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
         <h4 class="text-xl font-semibold text-primary">Member Management</h4>
         <p class="mt-3 text-gray-600">
-          Centralized profiles with personal details, roles, and history.
+          Organized profiles, roles, and ministry groups.
         </p>
       </div>
 
-      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-primary">Attendance Tracking</h4>
+      <!-- Attendance -->
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+        <div class="w-12 h-12 bg-primary/15 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M3 3v18h18"/>
+            <path d="M18 17V9"/>
+            <path d="M13 17V5"/>
+            <path d="M8 17v-3"/>
+          </svg>
+        </div>
+        <h4 class="text-xl font-semibold text-primary">Attendance</h4>
         <p class="mt-3 text-gray-600">
-          Track services, meetings, and events with ease.
+          Track services, fellowships, and programs.
         </p>
       </div>
 
-      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-primary">Events & Programs</h4>
+      <!-- Events -->
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+        <div class="w-12 h-12 bg-primary/15 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <path d="M16 2v4M8 2v4M3 10h18"/>
+          </svg>
+        </div>
+        <h4 class="text-xl font-semibold text-primary">Events</h4>
         <p class="mt-3 text-gray-600">
-          Manage church events, calendars, and announcements.
+          Plan and communicate church activities.
         </p>
       </div>
 
-      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-primary">Finance & Tithes</h4>
+      <!-- Finance -->
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+        <div class="w-12 h-12 bg-primary/15 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 1v22"/>
+            <path d="M17 5H9a3 3 0 000 6h6a3 3 0 010 6H6"/>
+          </svg>
+        </div>
+        <h4 class="text-xl font-semibold text-primary">Finance</h4>
         <p class="mt-3 text-gray-600">
-          Transparent tracking of offerings, donations, and expenses.
+          Transparent tithes, offerings, and expenses.
         </p>
       </div>
 
-      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-primary">Reports & Insights</h4>
+      <!-- Reports -->
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+        <div class="w-12 h-12 bg-primary/15 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M3 3v18h18"/>
+            <path d="M9 17V9"/>
+            <path d="M13 17V5"/>
+            <path d="M17 17v-7"/>
+          </svg>
+        </div>
+        <h4 class="text-xl font-semibold text-primary">Reports</h4>
         <p class="mt-3 text-gray-600">
-          Generate accurate reports for leadership and accountability.
+          Accurate insights for leadership decisions.
         </p>
       </div>
 
-      <div class="p-8 border rounded-2xl hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-primary">Secure Access</h4>
+      <!-- Security -->
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+        <div class="w-12 h-12 bg-primary/15 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="11" width="18" height="11" rx="2"/>
+            <path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+        </div>
+        <h4 class="text-xl font-semibold text-primary">Security</h4>
         <p class="mt-3 text-gray-600">
-          Role-based access for admins, pastors, and members.
+          Role-based secure access control.
         </p>
       </div>
 
@@ -148,37 +234,27 @@
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="bg-green-50 py-20">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h3 class="text-3xl font-bold">Built for Ministry, Powered by Technology</h3>
-    <p class="mt-6 text-gray-700 leading-relaxed">
-      This Church Management System is built to support churches of all sizes.
-      It focuses on simplicity, transparency, and scalability — allowing
-      leadership to focus on ministry while the system handles administration.
-    </p>
-  </div>
-</section>
-
 <!-- ================= CTA ================= -->
-<section class="py-20">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <div class="bg-primary rounded-3xl p-12 text-white">
-      <h3 class="text-3xl font-bold">Ready to Transform Church Administration?</h3>
-      <p class="mt-4 text-lg opacity-90">
-        Start managing your church more effectively today.
+<section class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="bg-gradient-to-r from-primary to-green-400 rounded-3xl p-14 text-white text-center shadow-2xl">
+      <h3 class="text-3xl md:text-4xl font-bold">
+        Ready to Serve Better with Technology?
+      </h3>
+      <p class="mt-5 text-lg opacity-90">
+        Join KCCU’s modern approach to church administration.
       </p>
-      <button class="mt-8 px-8 py-4 bg-white text-primary rounded-xl font-semibold text-lg hover:opacity-90">
-        Create an Account
+      <button class="mt-10 px-10 py-4 bg-white text-primary rounded-2xl font-semibold text-lg">
+        Create Account
       </button>
     </div>
   </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer class="bg-white border-t">
+<footer class="border-t bg-white">
   <div class="max-w-7xl mx-auto px-6 py-10 text-center text-gray-600">
-    © 2026 ChurchCMS. Built for growth, service, and stewardship.
+    © 2026 KCCU Church Management System — Built with care & purpose.
   </div>
 </footer>
 
